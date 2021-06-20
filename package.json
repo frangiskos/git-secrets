@@ -1,6 +1,6 @@
 {
     "name": "@frangiskos/git-secrets",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "description": "Save environment secrets or any other type of information encrypted in GitHub",
     "main": "dist/bin/index.js",
     "types": "dist/bin/index.d.ts",
