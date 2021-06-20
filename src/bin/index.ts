@@ -1,10 +1,12 @@
+#!/usr/bin/env node
+
 import * as chalk from 'chalk';
 import { path as RootPath } from 'app-root-path';
 import * as fs from 'fs-extra';
 import * as path from 'path';
-import { encrypt, decrypt } from './utils/crypto-utils';
-import { getFirstLine } from './utils/fs-utils';
-import { ENCRYPTED_FILE_EXT, KEY_FILE_EXT, APP_NAME } from './constants';
+import { encrypt, decrypt } from '../lib/crypto-utils';
+import { getFirstLine } from '../lib/fs-utils';
+import { ENCRYPTED_FILE_EXT, KEY_FILE_EXT, APP_NAME } from '../lib/constants';
 
 function getEncryptedFiles() {
     return fs

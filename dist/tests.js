@@ -6,7 +6,7 @@ const child_process_1 = require("child_process");
 const app_root_path_1 = require("app-root-path");
 const path = require("path");
 const fs = require("fs-extra");
-const constants_1 = require("./constants");
+const constants_1 = require("./lib/constants");
 const chalk = require("chalk");
 const secrets = {
     test: 0,
@@ -41,7 +41,7 @@ function encryptFile(file, key) {
             args,
             spawnOptions: {
                 stdio: ['pipe', process.stdout, process.stderr],
-                cwd: path.join(app_root_path_1.path, 'dist'),
+                cwd: path.join(app_root_path_1.path, 'dist', 'bin'),
             },
         });
     });
@@ -57,7 +57,7 @@ function testDecryption(fileToCheck) {
             args: ['index.js'],
             spawnOptions: {
                 stdio: ['pipe', process.stdout, process.stderr],
-                cwd: path.join(app_root_path_1.path, 'dist'),
+                cwd: path.join(app_root_path_1.path, 'dist', 'bin'),
             },
         });
         if (!fs.existsSync(fileToCheck))

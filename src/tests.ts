@@ -9,7 +9,7 @@ import { spawn, SpawnOptions } from 'child_process';
 import { path as RootPath } from 'app-root-path';
 import * as path from 'path';
 import * as fs from 'fs-extra';
-import { ENCRYPTED_FILE_EXT, KEY_FILE_EXT, TEST_FILE } from './constants';
+import { ENCRYPTED_FILE_EXT, KEY_FILE_EXT, TEST_FILE } from './lib/constants';
 import chalk = require('chalk');
 
 const secrets = {
@@ -52,7 +52,7 @@ async function encryptFile(file: string, key?: string) {
         args,
         spawnOptions: {
             stdio: ['pipe', process.stdout, process.stderr],
-            cwd: path.join(RootPath, 'dist'),
+            cwd: path.join(RootPath, 'dist', 'bin'),
         },
     });
 }
@@ -70,7 +70,7 @@ async function testDecryption(fileToCheck: string) {
         args: ['index.js'],
         spawnOptions: {
             stdio: ['pipe', process.stdout, process.stderr],
-            cwd: path.join(RootPath, 'dist'),
+            cwd: path.join(RootPath, 'dist', 'bin'),
         },
     });
 

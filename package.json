@@ -2,8 +2,11 @@
     "name": "@frangiskos/git-secrets",
     "version": "0.1.0",
     "description": "Save environment secrets or any other type of information encrypted in GitHub",
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
+    "main": "dist/bin/index.js",
+    "types": "dist/bin/index.d.ts",
+    "bin": {
+        "git-secrets": "./dist/bin/index.js"
+    },
     "scripts": {
         "prepare": "npm run build && npm run test",
         "build": "tsc",

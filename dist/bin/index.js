@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
@@ -5,9 +6,9 @@ const chalk = require("chalk");
 const app_root_path_1 = require("app-root-path");
 const fs = require("fs-extra");
 const path = require("path");
-const crypto_utils_1 = require("./utils/crypto-utils");
-const fs_utils_1 = require("./utils/fs-utils");
-const constants_1 = require("./constants");
+const crypto_utils_1 = require("../lib/crypto-utils");
+const fs_utils_1 = require("../lib/fs-utils");
+const constants_1 = require("../lib/constants");
 function getEncryptedFiles() {
     return fs
         .readdirSync(app_root_path_1.path)
