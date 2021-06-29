@@ -1,4 +1,4 @@
-# Save any files with sensitive information like database password in GitHub repositories securely
+# Save any files with sensitive information like environment variables or database passwords in GitHub repositories securely
 
 A simple way to handle secrets by saving them in GitHub in encrypted form. You only need to remember one "master" password.
 
